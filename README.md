@@ -9,7 +9,7 @@ Cardiovascular disease remains a leading cause of global mortality. While Machin
 
 This project introduces a **Hybrid Safety Architecture**. It combines a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" that ensures the AI never gives advice that contradicts established medical literature.
 
-##![Interactive Interface](interface.png.png)
+![Interactive Interface](interface.png.png)
 ![Performance Metrics](results.png.png)
 
 
