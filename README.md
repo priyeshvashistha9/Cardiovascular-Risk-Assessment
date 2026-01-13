@@ -6,8 +6,8 @@
 
 ## 🖼️ Project Preview
 <p align="center">
-  <img src="interface.png" width="48%" alt="Interactive Advisor Interface" />
-  <img src="results.png" width="48%" alt="Model Performance Results" />
+  <img src="interface.png.png" width="48%" alt="Interactive Advisor Interface" />
+  <img src="results.png.png" width="48%" alt="Model Performance Results" />
 </p>
 
 ## 📖 Project Overview
