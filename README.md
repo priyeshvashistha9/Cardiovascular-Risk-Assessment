@@ -8,10 +8,13 @@
 Cardiovascular disease is a leading cause of global mortality. While Machine Learning (ML) offers powerful predictive capabilities, standard "black-box" models often lack the safety mechanisms—interpretability, fairness, and clinical grounding—required for healthcare deployment.
 
 This project introduces a **Hybrid Safety Architecture**. It integrates a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" based on established medical literature. This ensures the system never provides counter-intuitive advice (e.g., suggesting that increasing blood pressure reduces risk) due to data noise.
+
 <p align="center">
   <img src="interface.png" width="45%" />
   <img src="results.png" width="45%" />
 </p>
+
+
 ## 🚀 Technical Features & Methodology
 * **Data Engineering:** Conducted an ablation study on pre-processing, specifically targeting outliers in Systolic/Diastolic blood pressure and BMI calculations to improve model stability.
 * **Multi-Model Benchmarking:** Evaluated Logistic Regression, Random Forest, and Gradient Boosting.
