@@ -29,8 +29,3 @@ After an extensive ablation study on pre-processing (handling outliers in blood 
 In healthcare, a model being "accurate" isn't enough; it must be **safe**. 
 1. **The Safety Layer:** If the ML model incorrectly predicts that a smoker has lower risk than a non-smoker (due to data noise), our Hybrid Architecture overrides the result to maintain clinical validity.
 2. **Fairness:** We conducted a fairness audit to ensure the model performs equally well for all genders, preventing systematic bias in medical leaf-lets.
-
-## 🛠️ Installation & Usage
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
