@@ -4,16 +4,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-## 🖼️ Project Preview
-<p align="center">
-  <img src="interface.png.png" width="48%" alt="Interactive Advisor Interface" />
-  <img src="results.png.png" width="48%" alt="Model Performance Results" />
-</p>
-
 ## 📖 Project Overview
 Cardiovascular disease remains a leading cause of global mortality. While Machine Learning (ML) offers powerful predictive capabilities, standard "black-box" models often lack the safety mechanisms required for healthcare deployment.
 
 This project introduces a **Hybrid Safety Architecture**. It combines a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" that ensures the AI never gives advice that contradicts established medical literature.
+
+##![Interactive Interface](interface.png.png)
+![Performance Metrics](results.png.png)
+
+
 
 ## 🚀 Key Features
 * **Multi-Model Benchmarking:** Comparative analysis of Logistic Regression, Random Forest, and Gradient Boosting.
@@ -28,10 +27,6 @@ This project introduces a **Hybrid Safety Architecture**. It combines a high-per
 | **ROC-AUC** | 0.802 |
 | **Gender Fairness** | < 0.010 |
 
-## 🛠️ Installation & Usage
-1. **Install Dependencies:**
-   ```bash
-   pip install pandas scikit-learn matplotlib numpy
 
  **Gender Fairness (Equalized Odds Gap)** | < 0.010 
 
