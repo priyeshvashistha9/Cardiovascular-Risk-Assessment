@@ -1,31 +1,53 @@
 # Responsible & Interactive Cardiovascular Risk Assessment
 ### A Hybrid Machine Learning Approach with Safety Constraints
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+This project presents an interactive decision support system for predicting cardiovascular risk. It combines a high-performing Gradient Boosting model with a Hybrid Safety Architecture to ensure health advice remains clinically valid.
 
-## 📖 Project Overview
-Cardiovascular disease remains a leading cause of global mortality. While Machine Learning (ML) offers powerful predictive capabilities, standard "black-box" models often lack the safety mechanisms—like interpretability and clinical grounding—required for actual healthcare deployment.
-
-This project introduces a **Hybrid Safety Architecture**. It combines a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" that ensures the AI never gives advice that contradicts established medical literature (e.g., suggesting that smoking or high blood pressure decreases risk).
+---
 
 ## 🚀 Key Features
-* **Multi-Model Benchmarking:** Comparative analysis of Logistic Regression, Random Forest, and Gradient Boosting.
-* **Probability Calibration:** Uses Sigmoid calibration to ensure the risk scores (0–100%) align with real-world empirical probabilities.
-* **Safety Override Logic:** A hard-coded medical logic layer that intercepts erroneous AI predictions.
-* **Interactive Smart Advisor:** A tool that calculates the "minimal effective dose" of lifestyle change (e.g., "Lose 4kg to move from High Risk to Moderate Risk").
-* **Responsible AI Audit:** Evaluated for demographic fairness using the Equalized Odds metric.
+* **Predictive Power:** Achieves an ROC-AUC of 0.802 and 73.6% accuracy.
+* **Hybrid Safety Layer:** A logic system that overrides AI predictions if they contradict medical facts.
+* **Responsible AI Audit:** Verified for fairness with a negligible gender bias gap (< 0.01).
+* **Interactive Smart Advisor:** A tool that calculates the weight loss required to lower patient risk.
+
+---
 
 ## 📊 Performance Summary
-After an extensive ablation study on pre-processing (handling outliers in blood pressure and BMI), the **Gradient Boosting** model was selected as the champion:
+| Model | Accuracy | ROC-AUC |
+| :--- | :--- | :--- |
+| Logistic Regression | 72.7% | 0.791 |
+| Random Forest | 73.3% | 0.801 |
+| **Gradient Boosting (Final)** | **73.6%** | **0.802** |
 
-| Metric | Result |
-| :--- | :--- |
-| **Accuracy** | 73.6% |
-| **ROC-AUC** | 0.802 |
-| **Gender Fairness (Equalized Odds Gap)** | < 0.010 |
+---
 
-## 🛡️ Responsible AI & Safety
-In healthcare, a model being "accurate" isn't enough; it must be **safe**. 
-1. **The Safety Layer:** If the ML model incorrectly predicts that a smoker has lower risk than a non-smoker (due to data noise), our Hybrid Architecture overrides the result to maintain clinical validity.
-2. **Fairness:** We conducted a fairness audit to ensure the model performs equally well for all genders, preventing systematic bias in medical leaf-lets.
+## 🛠️ Installation & Usage
+To run this project on your local machine:
+
+1. **Install Dependencies:**
+   Run this command in your terminal:
+   `pip install pandas scikit-learn matplotlib numpy`
+
+2. **Run the Notebook:**
+   Open `872.ipynb` in Jupyter Notebook or upload it to Google Colab.
+
+3. **Data Requirements:**
+   Ensure `cardio_train.csv` is in the same folder as the notebook.
+
+---
+
+## 📂 Project Structure
+* **872.ipynb**: Full source code and interactive tool.
+* **priyesh-872-finalReport.pdf**: Detailed research paper.
+* **cardio_train.csv**: Dataset (70,000 records).
+
+---
+
+## 🎓 Author & Credits
+**Author:** Priyesh Vashistha  
+**Institution:** Department of Electrical and Computer Engineering, Queen's University  
+**Data Source:** Cardiovascular Disease Dataset from Kaggle  
+
+---
+**Disclaimer:** This tool is for educational purposes only and is not a substitute for professional medical advice.
