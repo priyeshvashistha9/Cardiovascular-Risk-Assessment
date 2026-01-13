@@ -4,32 +4,34 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-## 📖 Project Overview
-Cardiovascular disease is a leading cause of global mortality. While Machine Learning (ML) offers powerful predictive capabilities, standard "black-box" models often lack the safety mechanisms—interpretability, fairness, and clinical grounding—required for healthcare deployment.
-
-This project introduces a **Hybrid Safety Architecture**. It integrates a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" based on established medical literature. This ensures the system never provides counter-intuitive advice (e.g., suggesting that increasing blood pressure reduces risk) due to data noise.
-
-
-
-## 🚀 Technical Features & Methodology
-* **Data Engineering:** Conducted an ablation study on pre-processing, specifically targeting outliers in Systolic/Diastolic blood pressure and BMI calculations to improve model stability.
-* **Multi-Model Benchmarking:** Evaluated Logistic Regression, Random Forest, and Gradient Boosting.
-* **Probability Calibration:** Applied **Sigmoid Calibration** to ensure that predicted risk scores represent real-world empirical probabilities.
-* **Hybrid Safety Override:** A hard-coded medical logic layer that intercepts AI predictions. If the AI suggests a lifestyle change that contradicts medical science, the Safety Layer overrides the output with clinically sound advice.
-* **Responsible AI Audit:** The system was audited for demographic fairness, achieving a negligible **Equalized Odds Gap of 0.010**, ensuring no systematic bias against gender groups.
-
-##<p align="center">
-  <img src="interface.png" width="45%" />
-  <img src="results.png" width="45%" />
+## 🖼️ Project Preview
+<p align="center">
+  <img src="interface.png" width="48%" alt="Interactive Advisor Interface" />
+  <img src="results.png" width="48%" alt="Model Performance Results" />
 </p>
 
+## 📖 Project Overview
+Cardiovascular disease remains a leading cause of global mortality. While Machine Learning (ML) offers powerful predictive capabilities, standard "black-box" models often lack the safety mechanisms required for healthcare deployment.
 
+This project introduces a **Hybrid Safety Architecture**. It combines a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" that ensures the AI never gives advice that contradicts established medical literature.
+
+## 🚀 Key Features
+* **Multi-Model Benchmarking:** Comparative analysis of Logistic Regression, Random Forest, and Gradient Boosting.
+* **Safety Override Logic:** A hard-coded medical logic layer that intercepts and corrects erroneous AI predictions.
+* **Interactive Smart Advisor:** A tool that calculates the "minimal effective dose" of lifestyle change to lower patient risk.
+* **Responsible AI Audit:** Verified for fairness with a negligible Equalized Odds Gap of 0.010.
 
 ## 📊 Performance Summary
-| Metric | Logistic Regression | Random Forest | **Gradient Boosting (Final)** |
-| :--- | :--- | :--- | :--- |
-| **Accuracy** | 72.7% | 73.3% | **73.6%** |
-| **ROC-AUC** | 0.791 | 0.801 | **0.802** |
+| Metric | Result |
+| :--- | :--- |
+| **Accuracy** | 73.6% |
+| **ROC-AUC** | 0.802 |
+| **Gender Fairness** | < 0.010 |
+
+## 🛠️ Installation & Usage
+1. **Install Dependencies:**
+   ```bash
+   pip install pandas scikit-learn matplotlib numpy
 
  **Gender Fairness (Equalized Odds Gap)** | < 0.010 
 
