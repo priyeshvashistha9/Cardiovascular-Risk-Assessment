@@ -22,7 +22,7 @@ This project introduces a **Hybrid Safety Architecture**. It integrates a high-p
 | **Accuracy** | 72.7% | 73.3% | **73.6%** |
 | **ROC-AUC** | 0.791 | 0.801 | **0.802** |
 
-| **Gender Fairness (Equalized Odds Gap)** | < 0.010 |
+ **Gender Fairness (Equalized Odds Gap)** | < 0.010 
 
 ## 🛠️ Installation & Usage
 To run this project on your local machine:
