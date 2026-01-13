@@ -9,10 +9,6 @@ Cardiovascular disease is a leading cause of global mortality. While Machine Lea
 
 This project introduces a **Hybrid Safety Architecture**. It integrates a high-performing Gradient Boosting classifier with a deterministic "Safety Layer" based on established medical literature. This ensures the system never provides counter-intuitive advice (e.g., suggesting that increasing blood pressure reduces risk) due to data noise.
 
-<p align="center">
-  <img src="interface.png" width="45%" />
-  <img src="results.png" width="45%" />
-</p>
 
 
 ## 🚀 Technical Features & Methodology
@@ -21,6 +17,13 @@ This project introduces a **Hybrid Safety Architecture**. It integrates a high-p
 * **Probability Calibration:** Applied **Sigmoid Calibration** to ensure that predicted risk scores represent real-world empirical probabilities.
 * **Hybrid Safety Override:** A hard-coded medical logic layer that intercepts AI predictions. If the AI suggests a lifestyle change that contradicts medical science, the Safety Layer overrides the output with clinically sound advice.
 * **Responsible AI Audit:** The system was audited for demographic fairness, achieving a negligible **Equalized Odds Gap of 0.010**, ensuring no systematic bias against gender groups.
+
+##<p align="center">
+  <img src="interface.png" width="45%" />
+  <img src="results.png" width="45%" />
+</p>
+
+
 
 ## 📊 Performance Summary
 | Metric | Logistic Regression | Random Forest | **Gradient Boosting (Final)** |
